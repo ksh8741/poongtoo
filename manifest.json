@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Poong Donor Extractor",
+  "version": "1.0",
+  "description": "Extract donor data from poong.today",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://poong.today/*",
+        "https://play.sooplive.co.kr/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "host_permissions": [
+    "https://poong.today/*",
+    "https://play.sooplive.co.kr/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://play.sooplive.co.kr/*"]
+    }
+  ],
+  "action": {
+    "default_title": "Poong Donor Extractor"
+  }
+}
