@@ -20,8 +20,12 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["injected.js"],
-      "matches": ["https://play.sooplive.co.kr/*"]
+      "resources": [
+        "injected.js",
+        "index.json",
+        "date/*.json"
+      ],
+      "matches": ["<all_urls>"]
     }
   ],
   "action": {
